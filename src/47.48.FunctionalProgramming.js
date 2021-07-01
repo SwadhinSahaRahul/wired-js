@@ -42,3 +42,12 @@ var checkPastLimitSimplified = function (limiter) {
 
 var arr5 = mapForEach(arr1, checkPastLimitSimplified(2));
 console.log(arr5);
+
+/**
+ * Include this File To Html for execute
+ */
+var arr6 = _.filter([1, 2, 3, 4, 5, 6, 7], function (item) {
+    return item % 2 === 0;
+});
+
+console.log(arr6);
