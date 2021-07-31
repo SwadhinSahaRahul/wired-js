@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,52 @@
 </head>
 <body>
 
-<!--<script src="FunctionsAreObjects.js"></script>-->
-<script src="../index.js"></script>
+<script src="../../assets/underscore.js"></script>
+<script src="../51.EverythingIsAnObjectOrAPrimitive.js"></script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comments</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <rating></rating>
+</div>
+<script>
+    // Write your code here
+
+    Vue.component('rating', {
+        data: function () {
+            return {
+                count: 0
+            }
+        },
+        template: `
+          <div class='rating'>
+          <span v-for="n of [1,2,3,4,5]" :class="{active: count >= n}" @click="setCount(n)">*</span>
+          </div>
+        `,
+
+        methods: {
+            setCount(number) {
+                this.count = number;
+            }
+        }
+    });
+    var vm = new Vue({
+        el: '#app',
+    });
+
+    // Example case
+    let span = document.getElementsByTagName("span")[2];
+    if (span) {
+        span.click();
+    }
+    setTimeout(() => console.log(document.getElementById("app").innerHTML));
+</script>
 </body>
 </html>
