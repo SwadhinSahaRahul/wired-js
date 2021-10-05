@@ -19,3 +19,24 @@ function greetSpanish(firstName, lastName) {
 
 greetEnglish('Swadhin', 'Saha');
 greetSpanish('Swadhin', 'Saha');
+
+//=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=><=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=
+
+function test(a) {
+    console.log(a);
+}
+
+function test(a, b) {
+    console.log(a, b);
+}
+
+test("A");
+test("A", "B");
+
+for (var i = 1; i <= 2; i++) {
+    setTimeout(function () {
+        console.log(i);
+    }, i * 1000)
+}
+
+//=>=>=>=>=>=>=>=>=>=>=>=>=>=>=>=><=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=<=
